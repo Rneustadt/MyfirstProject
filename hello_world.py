@@ -3,28 +3,30 @@ def getInput ():
     print ('ok you picked' + str(myinput ))
     return myinput
 
-def getResult (myFirstNumber,mySecondNumber):
-    print (myselection)
-    if myselection == '+' or myselection == '-' or myselection ==  '*' or myselection ==  '/':
-        if myselection == '+':
+def getResult (myFirstNumber,mySecondNumber,op):
+    print (op)
+    if op == '+' or op == '-' or op ==  '*' or op ==  '/':
+        if op == '+':
             return  int(myFirstNumber) + int(mySecondNumber)
-        elif myselection =='-':
+        elif op =='-':
             return  int(myFirstNumber) - int(mySecondNumber)
-        elif myselection =='*':
+        elif op =='*':
             return  int(myFirstNumber) * int(mySecondNumber)
-        elif myselection =='/':
+        elif op =='/':
             return  int(myFirstNumber) / int(mySecondNumber)
-        elif myselection =='%':
+        elif op =='%':
             return  int(myFirstNumber) % int(mySecondNumber)
     else:
         print ('faild')
         return 'wrong selection'
     
+def runCalc ():
+    print ('Lets add numbers')     # this is a comment
+    myFirstNumber = int (getInput())
+    mySecondNumber = int (getInput())
+    myselection = input('choose opperation')
+    print ('you selected ' + myselection) 
+    result = getResult(myFirstNumber, mySecondNumber, myselection)
+    print (result)
 
-print ('Lets add numbers')     # this is a comment
-myFirstNumber = int (getInput())
-mySecondNumber = int (getInput())
-myselection = input('choose opperation')
-print ('you selected ' + myselection) 
-result = getResult(myFirstNumber, mySecondNumber)
-print (result)
+runCalc ()
