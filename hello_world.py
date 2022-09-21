@@ -4,18 +4,22 @@ def getInput ():
     return myinput
 
 def getResult (myFirstNumber,mySecondNumber):
-    if myselection == '+':
-        return  int(myFirstNumber) + int(mySecondNumber)
-    elif myselection =='-':
-        return  int(myFirstNumber) - int(mySecondNumber)
-    elif myselection =='*':
-        return  int(myFirstNumber) * int(mySecondNumber)
-    elif myselection =='/':
-        return  int(myFirstNumber) / int(mySecondNumber)
-    elif myselection =='%':
-        return  int(myFirstNumber) % int(mySecondNumber)
+    print (myselection)
+    if myselection == '+' or myselection == '-' or myselection ==  '*' or myselection ==  '/':
+        if myselection == '+':
+            return  int(myFirstNumber) + int(mySecondNumber)
+        elif myselection =='-':
+            return  int(myFirstNumber) - int(mySecondNumber)
+        elif myselection =='*':
+            return  int(myFirstNumber) * int(mySecondNumber)
+        elif myselection =='/':
+            return  int(myFirstNumber) / int(mySecondNumber)
+        elif myselection =='%':
+            return  int(myFirstNumber) % int(mySecondNumber)
     else:
-        print ('wrong selection')
+        print ('faild')
+        return 'wrong selection'
+    
 
 print ('Lets add numbers')     # this is a comment
 myFirstNumber = int (getInput())
