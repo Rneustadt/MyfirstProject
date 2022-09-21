@@ -1,4 +1,4 @@
-print ('Lets add numbers')
+print ('Lets add numbers')     # this is a comment
 print ('pick a number between one and ten')
 myFirstNumber = input ()
 print ('ok you picked' + myFirstNumber )
