@@ -1,12 +1,32 @@
-print ('Lets add numbers')     # this is a comment
-print ('pick a number between one and ten')
-myFirstNumber = input ()
-print ('ok you picked' + myFirstNumber )
-print ('ok pick another number between one and ten' )
-mySecondNumber = input ()
-print ('ok you picked' + mySecondNumber)
-myFirstNumber = int(myFirstNumber)
-mySecondNumber = int(mySecondNumber)
-combinedNumber = myFirstNumber + mySecondNumber
-print ('your combined number is')
-print (combinedNumber)
+def getInput ():
+    myinput = input ('pick a number between one and ten - \n')
+    print ('ok you picked' + str(myinput ))
+    return myinput
+
+def getResult (myFirstNumber,mySecondNumber,op):
+    print (op)
+    if op == '+' or op == '-' or op ==  '*' or op ==  '/':
+        if op == '+':
+            return  int(myFirstNumber) + int(mySecondNumber)
+        elif op =='-':
+            return  int(myFirstNumber) - int(mySecondNumber)
+        elif op =='*':
+            return  int(myFirstNumber) * int(mySecondNumber)
+        elif op =='/':
+            return  int(myFirstNumber) / int(mySecondNumber)
+        elif op =='%':
+            return  int(myFirstNumber) % int(mySecondNumber)
+    else:
+        print ('faild')
+        return 'wrong selection'
+    
+def runCalc ():
+    print ('Lets add numbers')     # this is a comment
+    myFirstNumber = int (getInput())
+    mySecondNumber = int (getInput())
+    myselection = input('choose opperation')
+    print ('you selected ' + myselection) 
+    result = getResult(myFirstNumber, mySecondNumber, myselection)
+    print (result)
+
+runCalc ()
